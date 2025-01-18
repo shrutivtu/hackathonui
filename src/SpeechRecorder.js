@@ -37,9 +37,9 @@ const SpeechRecorder = () => {
   const uploadAudio = () => {
     const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/wav' });
     const formData = new FormData();
-    formData.append('audio', audioBlob, 'recording.wav');
-    
-    axios.post('https://your-backend-api-url.com/upload', formData, {
+    formData.append('file', audioBlob, 'recording.wav');
+    console.log(typeof(formData));
+    axios.post('https://your-backend-api-url.com/query-audio', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
