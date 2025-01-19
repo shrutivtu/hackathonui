@@ -1,45 +1,63 @@
-/* CSS for SpeechText2 component */
-
-/* General Styles */
-.voice-recorder {
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #1f1f1f;
+    --highlight-color: #bb86fc;
+    --button-color: #282828;
+    --button-hover-color: #383838;
+    --disabled-button-color: #555555;
+    --note-border-color: #444444;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 20px auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+
+  main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .voice-recorder {
+    min-width: 50%;
+    max-width: 50%;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .current-note, .saved-notes {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   h2 {
-    font-size: 24px;
+    color: var(--highlight-color);
     margin-bottom: 10px;
-    color: #333;
-  }
-  
-  h3 {
-    font-size: 20px;
-    margin-top: 15px;
-    color: #555;
-  }
-  
-  /* Current Note Section */
-  .current-note {
-    margin-bottom: 20px;
   }
   
   .mic-status {
-    font-size: 24px;
-    margin: 10px 0;
+    margin-bottom: 10px;
   }
   
   .mic-on {
-    color: green;
+    color: var(--highlight-color);
+    font-size: 24px;
   }
   
   .mic-off {
-    color: red;
+    color: var(--disabled-button-color);
+    font-size: 24px;
   }
   
   .actions {
@@ -48,78 +66,59 @@
     margin-bottom: 10px;
   }
   
-  .save-button,
-  .toggle-button {
-    padding: 8px 16px;
+  button {
+    background-color: var(--button-color);
+    color: var(--text-color);
     border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
     transition: background-color 0.3s;
   }
   
-  .save-button:disabled {
-    background-color: #aaa;
+  button:disabled {
+    background-color: var(--disabled-button-color);
     cursor: not-allowed;
   }
   
-  .toggle-button:hover,
-  .save-button:not(:disabled):hover {
-    background-color: #0056b3;
+  button:hover:not(:disabled) {
+    background-color: var(--button-hover-color);
   }
   
   .note-text {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #333;
-  }
-  
-  /* Saved Notes Section */
-  .saved-notes {
-    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--button-color);
+    border-radius: 5px;
+    border: 1px solid var(--note-border-color);
   }
   
   .note-item {
-    font-size: 16px;
+    padding: 8px;
+    background-color: var(--button-color);
+    border-radius: 5px;
     margin-bottom: 5px;
-    color: #444;
+    border: 1px solid var(--note-border-color);
   }
   
-  /* Query Section */
   .query-section {
     margin-top: 20px;
   }
   
   .query-button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #fff;
-    background-color: #28a745;
-    transition: background-color 0.3s;
-  }
-  
-  .query-button:hover {
-    background-color: #218838;
+    margin-bottom: 10px;
   }
   
   .query-status {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #777;
+    color: var(--text-color);
+    font-style: italic;
   }
   
-  /* Audio Response Section */
   .audio-response {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .audio-player {
     width: 100%;
-    margin-top: 10px;
+    outline: none;
   }
   
