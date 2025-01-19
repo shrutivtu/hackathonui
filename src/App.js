@@ -1,10 +1,12 @@
 import './App.css';
-import SpeechRecorder from './SpeechRecorder';
+import SpeechText from './SpeechText';
+import SpeechText2 from './SpeechText2'
 
 function App() {
   return (
     <div>
-      <SpeechRecorder />
+      {/* <SpeechText2 /> */}
+      <SpeechText />
     </div>
   );
 }

@@ -1,0 +1,125 @@
+/* CSS for SpeechText2 component */
+
+/* General Styles */
+.voice-recorder {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #555;
+  }
+  
+  /* Current Note Section */
+  .current-note {
+    margin-bottom: 20px;
+  }
+  
+  .mic-status {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .mic-on {
+    color: green;
+  }
+  
+  .mic-off {
+    color: red;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .save-button,
+  .toggle-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s;
+  }
+  
+  .save-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .toggle-button:hover,
+  .save-button:not(:disabled):hover {
+    background-color: #0056b3;
+  }
+  
+  .note-text {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* Saved Notes Section */
+  .saved-notes {
+    margin-top: 20px;
+  }
+  
+  .note-item {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  
+  /* Query Section */
+  .query-section {
+    margin-top: 20px;
+  }
+  
+  .query-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    transition: background-color 0.3s;
+  }
+  
+  .query-button:hover {
+    background-color: #218838;
+  }
+  
+  .query-status {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Audio Response Section */
+  .audio-response {
+    margin-top: 20px;
+  }
+  
+  .audio-player {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
