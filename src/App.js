@@ -1,4 +1,3 @@
-import './App.css';
 import SpeechText from './SpeechText';
 
 function App() {
